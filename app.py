@@ -155,8 +155,8 @@ def perfil():
         cursor = mysql.connection.cursor()
         cursor.execute(
             """
-            SELECT u.id_usuario, u.nombre, u.apellidos, u.email,
-                   r.nombre_rol AS rol
+            SELECT u.id_usuario, u.nombre, u.apellidos,
+	   	   u.email AS correo, r.nombre_rol AS rol
             FROM usuarios u
             INNER JOIN roles r ON u.id_rol = r.id_rol
             WHERE u.id_usuario = %s
