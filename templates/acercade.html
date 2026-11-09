@@ -1,0 +1,56 @@
+
+{% extends 'plantilla.html' %}
+
+{% block titulo %}Acerca de | Papelia{% endblock %}
+
+{% block cabecera %}Acerca de Papelia{% endblock %}
+
+{% block contenido %}
+
+<section class="card shadow-sm p-4">
+
+    <div class="text-center mb-4">
+
+        <i class="fas fa-book-open fa-3x" style="color: var(--color-principal);"></i>
+
+        <h2 class="mt-3">¿Qué es Papelia?</h2>
+
+    </div>
+
+    <p class="text-center">Papelia es un Sistema de Punto de Venta (POS) diseñado para una papelería.</p>
+
+    <p>Nuestro objetivo es digitalizar y optimizar la gestión de ventas, inventario y atención al cliente, facilitando el control de los productos y mejorando la administración del negocio.</p>
+
+    <div class="row g-3 mt-3">
+
+        <div class="col-md-4">
+            <div class="tarjeta-info">
+                <i class="fas fa-boxes-stacked"></i>
+                <h3>Inventario</h3>
+                <p>Control de productos y existencias.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="tarjeta-info">
+                <i class="fas fa-cash-register"></i>
+                <h3>Ventas</h3>
+                <p>Registro y administración de ventas.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="tarjeta-info">
+                <i class="fas fa-users"></i>
+                <h3>Usuarios</h3>
+                <p>Administración de acceso al sistema.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+

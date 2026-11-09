@@ -1,0 +1,55 @@
+
+{% extends 'plantilla.html' %}
+
+{% block titulo %}Iniciar sesión | Papelia{% endblock %}
+
+{% block cabecera %}Iniciar sesión{% endblock %}
+
+{% block contenido %}
+
+<section class="login card shadow p-4">
+
+    <form action="{{ url_for('login') }}" method="POST">
+
+
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <div class="mb-3">
+            <label for="lCorreo" class="form-label">Correo electrónico</label>
+
+            <input
+                type="email"
+                class="form-control"
+                name="lCorreo"
+                id="lCorreo"
+                placeholder="correo@ejemplo.com"
+                autocomplete="email"
+                required
+            >
+        </div>
+
+        <div class="mb-3">
+            <label for="lPass" class="form-label">Contraseña</label>
+
+            <input
+                type="password"
+                class="form-control"
+                name="lPass"
+                id="lPass"
+                placeholder="Tu contraseña"
+                autocomplete="current-password"
+                required
+            >
+        </div>
+
+        <button type="submit" class="btn btn-papelia w-100 mt-2">Iniciar sesión</button>
+
+    </form>
+
+    <p class="mt-3 mb-0 text-center">¿No tienes una cuenta?<a href="{{ url_for('registro') }}">Regístrate</a></p>
+
+</section>
+
+{% endblock %}
+
+

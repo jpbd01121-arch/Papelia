@@ -1,0 +1,13 @@
+# Entorno virtual
+venv/
+
+# Variables de entorno y contraseñas
+.env
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+
+# Base de datos y archivos temporales
+*.db
+*.log
